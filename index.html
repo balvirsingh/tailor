@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f8f5f0;
+            color: #4b3832;
+            position: relative;
+            margin-top: 120px;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #585144, #3e2723); /* Gradient background */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            border-bottom: 2px solid #4b3832; /* Slight border at the bottom */
+            position: fixed; /* Fixed position */
+            top: 0; /* Aligns at the top */
+            width: 100%; /* Full width */
+            z-index: 1000;
+        }
+
+        .navbar-brand img {
+            height: 60px; /* Adjust size */
+            width: 60px;  /* Adjust size */
+            border-radius: 50%; /* Makes the logo circular */
+            object-fit: cover;
+        }
+
+        .nav-link {
+            font-size: 1.1rem; /* Slightly larger font size */
+            transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+        }
+
+        .nav-link:hover {
+            color: #f2e8dc; /* Light text color on hover */
+            background-color: rgba(0, 0, 0, 0.2); /* Subtle background color on hover */
+            border-radius: 5px; /* Rounded corners on hover */
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-img, .process-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px; /* Rounded corners */
+            transition: transform 0.5s ease-in-out;
+        }
+        .product-img:hover, .process-img:hover {
+            transform: scale(1.05); /* Zoom effect */
+        }
+        .about-me {
+            background-color: #f2e8dc;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 4rem;
+        }
+        .contact-info {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+        footer {
+            background: linear-gradient(135deg, #585144, #3e2723); /* Gradient background */
+            color: #f2e8dc; /* Light text color */
+            padding: 2rem 0; /* Increased padding */
+            text-align: center;
+            border-top: 2px solid #4b3832; /* Border at the top */
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        .social-icons {
+            margin-top: 1rem; /* Space above icons */
+        }
+
+        .social-icons a {
+            color: #f2e8dc; /* Icon color */
+            font-size: 1.5rem; /* Icon size */
+            margin: 0 10px; /* Space between icons */
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        .social-icons a:hover {
+            color: #696766; /* Change color on hover */
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px; /* Adjusts the distance from the bottom of the screen */
+            right: 20px;  /* Adjusts the distance from the right of the screen */
+            background-color: #4b3832; /* Background color of the icon */
+            color: #fff; /* Icon color */
+            border-radius: 50%; /* Makes the icon circular */
+            padding: 15px; /* Increases the size of the icon */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow for better visibility */
+            cursor: pointer; /* Changes the cursor to a pointer */
+            z-index: 1000; /* Ensures the icon stays on top of other elements */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+        }
+
+        .scroll-to-top:hover {
+            background-color: #f2e8dc; /* Changes background on hover */
+            color: #4b3832; /* Changes icon color on hover */
+            transform: scale(1.1); /* Slightly increases size on hover */
+        }
+
+        .scroll-to-top i {
+            font-size: 24px; /* Icon size */
+        }
+        .social-icons a {
+            color: #4b3832;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .testimonial {
+            background-color: #f2e8dc;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img style="height: 50px; width: 50px;" src="https://media.istockphoto.com/id/1448491672/photo/needle-with-black-thread-in-the-form-of-a-treble-clef.webp?s=2048x2048&w=is&k=20&c=qr5n3FRJw7qubKqSebNksGHBbZZ2jijHWpoB9xVmawU=" alt="Logo"> Tailor's Portfolio
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tailoring Process Section -->
+    <section id="process" class="container my-5">
+        <h2 class="section-heading text-center">Our Tailoring Process</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://plus.unsplash.com/premium_photo-1682142715511-27bfbfdc044f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Measuring" class="process-img">
+                <h5 class="text-center mt-3">Measuring</h5>
+            </div>
+            <div class="col-md-4">
+                <img src="https://media.istockphoto.com/id/1173774199/photo/small-business-owner.webp?s=2048x2048&w=is&k=20&c=Kmq8oZvrFNYVX3V29A90FUpK9zHZNdrcT3fu3ukvV0E=" alt="Cutting" class="process-img">
+                <h5 class="text-center mt-3">Cutting & Suiting</h5>
+            </div>
+            <div class="col-md-4">
+                <img src="https://media.istockphoto.com/id/1533059092/photo/in-front-of-the-camera-good-looking-dressmaker-using-her-professional-sewing-machine-to-sew-a.webp?s=2048x2048&w=is&k=20&c=2fT3s9aJqMtK_8N5_90xG_wVy7vxvitfS2049w7VsZY=" alt="Stitching" class="process-img">
+                <h5 class="text-center mt-3">Stitching</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="container my-5">
+        <h2 class="section-heading text-center">Our Products</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://media.istockphoto.com/id/1294103843/photo/pants-isolated-on-white-background-hanged-trousers-chino-pants.webp?s=2048x2048&w=is&k=20&c=eWHZ7DW0qHi-4rwY2BcOllmaYQzWcYjV__jKjZc1-Es=" alt="Pant" class="product-img">
+                <h5 class="text-center mt-3">Pant</h5>
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shirt" class="product-img">
+                <h5 class="text-center mt-3">Shirt</h5>
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1633655442168-c6ef0ed2f984?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Suit" class="product-img">
+                <h5 class="text-center mt-3">Suit</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="container my-5">
+        <h2 class="section-heading text-center">About Me</h2>
+        <div class="about-me">
+            <p>I have over 20 years of experience in tailoring, specializing in custom-made suits, pants, and shirts. My passion is to deliver perfectly tailored garments that exceed my clients' expectations. My journey started at a young age, working alongside my father in his tailoring shop, learning the intricate art of crafting clothes that not only fit well but also enhance the wearer's personality.</p>
+            <p>Over the years, I have honed my skills, staying updated with the latest trends and techniques while retaining the timeless quality of traditional tailoring. Every piece of clothing I create is a testament to my commitment to quality, attention to detail, and love for the craft.</p>
+            <p>I take pride in knowing that my clients leave with a product that not only fits them perfectly but also makes them feel confident and stylish. The art of tailoring is not just about stitching fabric together; it's about creating a unique experience for each client, ensuring that their personal style and preferences are reflected in every garment.</p>
+            <p>Whether it's a suit for a special occasion or everyday wear, I believe in providing a service that is both professional and personalized. My goal is to help you feel your best in clothing that fits perfectly and looks amazing.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container my-5">
+        <h2 class="section-heading text-center">What Our Clients Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"The best tailor I've ever worked with! My suits fit perfectly and the attention to detail is exceptional."</p>
+                    <p><strong>John Doe</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Highly recommend! The craftsmanship is superb, and the service is always friendly and professional."</p>
+                    <p><strong>Jane Smith</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Excellent tailoring with a personal touch. The suits I’ve ordered are stylish and made to last."</p>
+                    <p><strong>Emily Johnson</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="section-heading text-center">Contact</h2>
+        <div class="contact-info text-center">
+            <p>Phone: +123 456 7890</p>
+            <p>Email: tailor@example.com</p>
+            <div class="social-icons">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tailor's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll to Top Icon -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Scroll to Top functionality
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('#scrollToTop').fadeIn();
+            } else {
+                $('#scrollToTop').fadeOut();
+            }
+        });
+        $('a.nav-link').on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - 100 // Adjusts scroll position by 100px
+                }, 800);
+            }
+        });
+        $('#scrollToTop').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+    </script>
+</body>
+</html>
+
